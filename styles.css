@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+:root {
+    --containerSize: 900px;
+    --size: 1rem;
+    --mainColor: #27374D;
+    --secondColor: #526D82;
+    --thirdColor: #9DB2BF;
+    --fourthColor: #DDE6ED;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainColor);
+}
+
+main {
+    width: min(80%, var(--containerSize));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondColor);
+    padding: 1.5rem;
+    gap: 2rem;
+    border-radius: 1.5rem;
+}
+
+.introducere {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+
+.introducere h1 {
+    color: aqua;
+    font-weight: bolder;
+}
+
+.introducere h2 {
+    text-align: center;
+    font-size: calc(1.1 * var(--size));
+}
+
+.preferinte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+}
+
+.pic {
+    transition: all .2s ease-out;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.selected {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+}
+
+.pictures {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.atentie {
+    text-align: center;
+    font-weight: bold;
+}
+
+#where {
+    text-decoration: none;
+    color: aqua;
+    font-size: calc(1.5 * var(--size));
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+#where:hover {
+    text-shadow: 0 0 20px blue;
+}
+
+img {
+    width: 140px;
+    height: 140px;
+    border-radius: 2rem;
+}
+
+@media(max-width: 899px) {
+    main {
+        padding: 1rem;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media(max-width: 799px) {
+    main {
+        padding: 1rem;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media(max-width: 699px) {
+    main {
+        padding: .8rem;
+    }
+
+    img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .introducere h2{
+        font-size: calc(.9 * var(--size));
+    }
+
+    .introducere h1{
+        font-size: calc(1.7 * var(--size));
+    }
+
+    .preferinte h3 {
+        font-size: calc(1 * var(--size));
+    }
+
+    .atentie, #where {
+        font-size: calc(1 * var(--size));
+    }
+}
+
+@media(max-width: 599px) {
+    main {
+        padding: .7rem;
+    }
+
+    img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .introducere h2{
+        font-size: calc(.8 * var(--size));
+    }
+
+    .introducere h1{
+        font-size: calc(1.5 * var(--size));
+    }
+
+    .preferinte h3 {
+        font-size: calc(.9 * var(--size));
+    }
+
+    .atentie, #where {
+        font-size: calc(.9 * var(--size));
+    }
+}
+
+@media(max-width: 469px) {
+    main {
+        padding: .8rem;
+    }
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .introducere h2{
+        font-size: calc(.9 * var(--size));
+    }
+
+    .introducere h1{
+        font-size: calc(1.5 * var(--size));
+    }
+
+    .preferinte h3 {
+        font-size: calc(.9 * var(--size));
+    }
+
+    .atentie, #where {
+        font-size: calc(.9 * var(--size));
+    }
+
+    .pictures {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}

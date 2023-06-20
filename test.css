@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --containerSize: 900px;
+    --size: 1rem;
+    --mainColor: #27374D;
+    --secondColor: #526D82;
+    --thirdColor: #9DB2BF;
+    --fourthColor: #DDE6ED;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainColor);
+}
+
+main {
+    width: min(80%, var(--containerSize));
+    background-color: var(--thirdColor);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.testEfectiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    text-align: center;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.question h4 {
+    font-size: calc(1.2 * var(--size))
+}
+
+.variante {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+.start {
+    text-align: center;
+}
+
+#finish{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: calc(1.2 * var(--size));
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    text-align: center;
+}
+
+#finish:hover {
+    color: blue;
+}
+
+@media(max-width: 649px) {
+    main {
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .testEfectiv {
+        gap: 1rem;
+    }
+
+    .question h4{
+        font-size: calc(.9 * var(--size));
+    }
+
+    .question {
+        font-size: calc(.8 * var(--size));
+    }
+}
+
+@media(max-width: 579px) {
+    .variante {
+        flex-direction: column;
+    }
+
+    .question h4{
+        font-size: calc(1.5 * var(--size));
+    }
+
+    .question {
+        font-size: calc(1.2 * var(--size));
+    }
+
+    #finish {
+        font-size: calc(1.1 * var(--size));
+    }
+}
+
+@media(max-width: 399px) {
+    .variante {
+        flex-direction: column;
+    }
+
+    .question h4{
+        font-size: calc(1.1 * var(--size));
+    }
+
+    .question {
+        font-size: calc(.9 * var(--size));
+    }
+
+    #finish {
+        font-size: calc(.9 * var(--size));
+    }
+}
